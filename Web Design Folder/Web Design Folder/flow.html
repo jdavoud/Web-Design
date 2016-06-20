@@ -1,0 +1,313 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Flow Free</title>
+
+<meta name="keywords" content="games,game,html5,flow,flow free,html5 games,flow html5,puzzle" />
+
+<meta name="description" content="Flow Free is a simple yet addictive puzzle game.
+
+Connect matching colors with pipe to create a flow. Pair all colors, and cover the entire board to solve each puzzle in Flow Free. But watch out, pipes will break if they cross or overlap!
+
+Developed By Mohammed AlMadhoun" />
+
+<meta property="og:image" content="http://moh97.us/flow/icon_128.png" />
+
+<meta property="og:title" content="Flow Free" />
+
+<meta property="fb:admins" content="100000107035748"/>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+<script type="text/javascript" src="mkGame.js?v=2.0"></script>
+
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="mainJS.js?v=2.0"></script>
+
+<link rel="icon" href="icon_16.png" />
+
+<link rel="stylesheet" href="style.css?v=2.0" />
+
+<!--3ooooo :D , By Mohammed Nafiz ElMadhoun-->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-33316888-1']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<a style="position: fixed;right:15px; top:15px;" href="https://chrome.google.com/webstore/detail/flow-free/pbnmelddedlommnmllmfhoephaidddmk"><img src="https://developers.google.com/chrome/web-store/images/branding/ChromeWebStore_BadgeWBorder_v2_206x58.png" border="0" width="206" height="58" /></a>
+
+<!-- AddThis Button BEGIN -->
+
+<div class="addthis_toolbox addthis_floating_style addthis_counter_style" addthis:url="http://moh97.us/flow" style="left:15px;top:109px;">
+
+<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+
+<a class="addthis_button_tweet" tw:count="vertical"></a>
+
+<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+
+<a class="addthis_counter"></a>
+
+</div>
+
+<script type="text/javascript">var addthis_config = {};</script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5086d9d82b898e46"></script>
+
+<!-- AddThis Button END -->
+
+
+
+<!--Facebook like start-->
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=336632613085240";
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="margin:10px auto; display:block; width:550px;background: white;padding: 4px;border-radius: 5px;" class="fb-like" data-href="https://www.facebook.com/flow.in.html5" data-send="true" data-width="550" data-show-faces="false" data-font="segoe ui"></div>
+
+<!--Facebook like end-->
+
+
+
+<!--adsense Start-->
+
+<div style="text-align: center;margin:5px 0;">
+
+	<script type="text/javascript"><!--
+
+	google_ad_client = "ca-pub-2763588259572159";
+
+	/* Games */
+
+	google_ad_slot = "9775194087";
+
+	google_ad_width = 468;
+
+	google_ad_height = 60;
+
+	//-->
+
+	</script>
+
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+</div>
+
+<div id="leftHads">
+
+	<script type="text/javascript"><!--
+
+    google_ad_client = "ca-pub-2763588259572159";
+
+    /* Games-h */
+
+    google_ad_slot = "0516109792";
+
+    google_ad_width = 120;
+
+    google_ad_height = 600;
+
+    //-->
+
+    </script>
+
+    <script type="text/javascript"
+
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+
+    </script>
+
+</div>
+
+<div id="rightHads">
+
+	<script type="text/javascript"><!--
+
+    google_ad_client = "ca-pub-2763588259572159";
+
+    /* Games-h */
+
+    google_ad_slot = "0516109792";
+
+    google_ad_width = 120;
+
+    google_ad_height = 600;
+
+    //-->
+
+    </script>
+
+    <script type="text/javascript"
+
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+
+    </script>
+
+</div>
+
+<!--adsense End-->
+
+
+
+<div class="mainS" style="margin-top:15px">
+
+	<canvas width="550" height="550" id="bgCanvas" ></canvas>
+
+	<canvas width="550" height="550" id="liCanvas"></canvas>
+
+    <div id="levelCompS">
+
+    	<span class="title"></span>
+
+        <span class="desc"></span>
+
+        <input type="button" data-id="forw" id="forwCS" value="next level" />
+
+        <input type="button" data-id="retr" id="retrCS" value="play again" />
+
+        <input type="button" id="keepCS" value="keep playing" />
+
+        <span class="scoreT">Total Score : <span id="score"></span></span>
+
+    </div>
+
+    <div id="controls">
+
+    	<span id="goHome"></span>
+
+        <h3 id="levelName">Level </h3>
+
+    	<span id="back" data-id="back"></span>
+
+        <span id="retr" data-id="retr"></span>
+
+        <span id="forw" data-id="forw"></span>
+
+        <h3 id="ScInfo" style="font-size:19px">pipe : <span id="Perc">0</span>%<br />moves : <span id="movesC">0</span>/<span id="movesB">8</span></h3>
+
+    </div>
+
+	<div id="pack_main">
+
+		<span id="pgoHome"></span>
+
+		<span style="margin-bottom:60px;margin-right: 100px;">
+
+			<span style="color:#F00">l</span><span style="color:#007d00">e</span><span style="color:#00f;">v</span><span style="color:#efeb00">e</span><span style="color:#ff7d00">l</span>
+
+			<span style="color:#F00; margin-left:10px;">p</span><span style="color:#007d00">a</span><span style="color:#00f">c</span><span style="color:#efeb00">k</span>
+
+		</span>
+
+	</div>
+
+    <div id="levels_main">
+
+        <div id="levels">
+
+        </div>
+
+        <div id="slideCon">
+
+	        <span id="goMainH"></span>
+
+        	<span id="sback"></span>
+
+            <ul id="SCPoint">
+
+            </ul>
+
+            <span id="sforw"></span>
+
+			<span id="pback"></span>
+
+        </div>
+
+    </div>
+
+    <div id="main_screen" style="background: url(http://a.dryicons.com/images/icon_sets/christmas_icons_set/png/512x512/christmas_tree.png)  -253px 80px no-repeat;">
+
+    	<span style="margin-bottom:60px"><span style="color:#0FF">F</span><span style="color:#FF0">L</span><span style="color:#f00;">O</span><span style="color:#F77D00">W</span></span>
+
+    	<span id="playN">Play</span>
+
+        <a target="new" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JZV2LUFN57C6J">Donate</a>
+
+        <a target="new" href="http://youtu.be/DE0SMfbM9Jc">How To Play</a>
+
+		<span id="aboutN">About</span>
+
+		
+
+    </div>
+
+    <div id="about_screen">
+
+	    <span style="margin-bottom:10px"><span style="color:#0FF">A</span><span style="color:#FF0">B</span><span style="color:#f00;">O</span><span style="color:#F77D00">U</span><span style="color:#A42D29">T</span></span>
+
+        <span style="font-size: 22px;line-height: 50px;">FLOW in HTML5
+
+        <br />Game idea by <a href="http://blog.bigduckgames.com/">Big Duck Games</a>
+
+        <br />Developed By
+
+        <br /><a href="http://facebook.com/moh97">Mohammed N. Madhoun</a><br /><a href="http://moh97.us/blog">My Blog :)</a><br /><br /><br />
+
+        <span id="goMainA">Back To Menu</span>
+
+        </span>
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+
+</html>
